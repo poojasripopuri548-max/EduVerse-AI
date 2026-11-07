@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Roadmap Generator | EduVerse AI</title>
+    <link rel="stylesheet" href="../css/roadmap.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="topbar">
+        <a href="../index.html" class="logo">
+            EduVerse<span>AI.</span>
+        </a>
+
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="learning.html">Learning Companion</a>
+            <a href="code-review.html">Code Reviewer</a>
+            <a href="skill-analyzer.html">Skill Analyzer</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <!-- PAGE INTRO -->
+        <section class="page-heading">
+            <p class="eyebrow">PLAN YOUR FUTURE WITH AI</p>
+            <h1>Personalized Learning Roadmap</h1>
+            <p>
+                Define your career goal, understand your current level
+                and create a structured learning journey.
+            </p>
+        </section>
+
+        <!-- ROADMAP FORM -->
+        <section class="roadmap-form-card">
+
+            <div class="section-heading">
+                <h2>Build Your Career Roadmap</h2>
+                <p>Tell us about your learning goals.</p>
+            </div>
+
+            <form id="roadmapForm">
+
+                <div class="form-group">
+                    <label for="careerGoal">Choose Your Career Goal</label>
+
+                    <select id="careerGoal" required>
+                        <option value="">Select your career goal</option>
+                        <option value="AI Engineer">AI Engineer</option>
+                        <option value="Machine Learning Engineer">Machine Learning Engineer</option>
+                        <option value="Data Scientist">Data Scientist</option>
+                        <option value="Data Analyst">Data Analyst</option>
+                        <option value="Web Developer">Web Developer</option>
+                        <option value="Full Stack Developer">Full Stack Developer</option>
+                        <option value="Software Engineer">Software Engineer</option>
+                        <option value="Cloud Engineer">Cloud Engineer</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="currentLevel">Your Current Skill Level</label>
+
+                    <select id="currentLevel" required>
+                        <option value="">Select your current level</option>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="duration">Preferred Learning Duration</label>
+
+                    <select id="duration" required>
+                        <option value="">Select duration</option>
+                        <option value="1">1 Month</option>
+                        <option value="3">3 Months</option>
+                        <option value="6">6 Months</option>
+                        <option value="9">9 Months</option>
+                        <option value="12">12 Months</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="hours">Daily Study Time</label>
+
+                    <select id="hours" required>
+                        <option value="">Select daily study time</option>
+                        <option value="1">1 Hour</option>
+                        <option value="2">2 Hours</option>
+                        <option value="3">3 Hours</option>
+                        <option value="4">4 Hours</option>
+                        <option value="5">5+ Hours</option>
+                    </select>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="interests">Your Interests and Skills</label>
+
+                    <textarea
+                        id="interests"
+                        rows="4"
+                        placeholder="Example: Python, Machine Learning, SQL, Data Analysis..."
+                        required
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="generate-btn">
+                    Generate My Roadmap →
+                </button>
+
+            </form>
+        </section>
+
+        <!-- ROADMAP RESULTS -->
+        <section class="roadmap-results" id="roadmapResults">
+
+            <div class="section-heading">
+                <h2>Your Personalized Roadmap</h2>
+                <p>Your learning journey will appear here.</p>
+            </div>
+
+            <div id="roadmapContent" class="roadmap-content">
+                <div class="empty-state">
+                    <div class="empty-icon">✦</div>
+                    <h3>Your journey starts here!</h3>
+                    <p>
+                        Complete the form above to generate your
+                        career learning roadmap.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <p class="note">
+            Note: This is a frontend roadmap demo using predefined learning
+            milestones. AI-generated personalization will be connected later.
+        </p>
+
+    </main>
+
+    <footer>
+        © 2026 EduVerse AI. Learn Smarter. Grow Faster.
+    </footer>
+
+    <script src="../js/roadmap.js"></script>
+
+</body>
+</html>

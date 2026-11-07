@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Skill Analyzer | EduVerse AI</title>
+    <link rel="stylesheet" href="../css/skill-analyzer.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="topbar">
+        <a href="../index.html" class="logo">
+            EduVerse<span>AI.</span>
+        </a>
+
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="learning.html">Learning Companion</a>
+            <a href="code-review.html">Code Reviewer</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <!-- PAGE INTRO -->
+        <section class="page-heading">
+            <p class="eyebrow">DISCOVER YOUR POTENTIAL</p>
+            <h1>AI Skill Analyzer</h1>
+            <p>
+                Evaluate your technical skills, discover your strengths
+                and identify areas for improvement.
+            </p>
+        </section>
+
+        <!-- PROFILE SECTION -->
+        <section class="profile-card">
+            <div class="profile-avatar">S</div>
+
+            <div>
+                <h2>Your Skill Profile</h2>
+                <p>Build your technical profile and understand your capabilities.</p>
+            </div>
+        </section>
+
+        <!-- SKILL ASSESSMENT -->
+        <section class="assessment-card">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Technical Skill Assessment</h2>
+                    <p>Rate your current knowledge in each skill.</p>
+                </div>
+            </div>
+
+            <form id="skillForm">
+
+                <div class="skill-input">
+                    <label for="python">Python Programming</label>
+                    <select id="python" name="Python" required>
+                        <option value="">Select proficiency</option>
+                        <option value="1">Beginner</option>
+                        <option value="2">Basic</option>
+                        <option value="3">Intermediate</option>
+                        <option value="4">Advanced</option>
+                        <option value="5">Expert</option>
+                    </select>
+                </div>
+
+                <div class="skill-input">
+                    <label for="java">Java Programming</label>
+                    <select id="java" name="Java" required>
+                        <option value="">Select proficiency</option>
+                        <option value="1">Beginner</option>
+                        <option value="2">Basic</option>
+                        <option value="3">Intermediate</option>
+                        <option value="4">Advanced</option>
+                        <option value="5">Expert</option>
+                    </select>
+                </div>
+
+                <div class="skill-input">
+                    <label for="ml">Machine Learning</label>
+                    <select id="ml" name="Machine Learning" required>
+                        <option value="">Select proficiency</option>
+                        <option value="1">Beginner</option>
+                        <option value="2">Basic</option>
+                        <option value="3">Intermediate</option>
+                        <option value="4">Advanced</option>
+                        <option value="5">Expert</option>
+                    </select>
+                </div>
+
+                <div class="skill-input">
+                    <label for="web">Web Development</label>
+                    <select id="web" name="Web Development" required>
+                        <option value="">Select proficiency</option>
+                        <option value="1">Beginner</option>
+                        <option value="2">Basic</option>
+                        <option value="3">Intermediate</option>
+                        <option value="4">Advanced</option>
+                        <option value="5">Expert</option>
+                    </select>
+                </div>
+
+                <div class="skill-input">
+                    <label for="dbms">Database Management</label>
+                    <select id="dbms" name="Database Management" required>
+                        <option value="">Select proficiency</option>
+                        <option value="1">Beginner</option>
+                        <option value="2">Basic</option>
+                        <option value="3">Intermediate</option>
+                        <option value="4">Advanced</option>
+                        <option value="5">Expert</option>
+                    </select>
+                </div>
+
+                <div class="skill-input">
+                    <label for="communication">Communication</label>
+                    <select id="communication" name="Communication" required>
+                        <option value="">Select proficiency</option>
+                        <option value="1">Beginner</option>
+                        <option value="2">Basic</option>
+                        <option value="3">Intermediate</option>
+                        <option value="4">Advanced</option>
+                        <option value="5">Expert</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="analyze-btn">
+                    Analyze My Skills →
+                </button>
+
+            </form>
+        </section>
+
+        <!-- RESULTS -->
+        <section class="results-section" id="resultsSection">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Your Skill Analysis</h2>
+                    <p>Your assessment results will appear here.</p>
+                </div>
+            </div>
+
+            <div class="results-grid">
+
+                <div class="result-card">
+                    <h3>Overall Skill Score</h3>
+                    <div class="score-circle">
+                        <span id="overallScore">--%</span>
+                    </div>
+                    <p>Based on your self-assessment</p>
+                </div>
+
+                <div class="result-card">
+                    <h3>Your Strengths</h3>
+                    <div id="strengths">
+                        <p>Complete the assessment to view your strengths.</p>
+                    </div>
+                </div>
+
+                <div class="result-card">
+                    <h3>Areas to Improve</h3>
+                    <div id="weaknesses">
+                        <p>Complete the assessment to identify improvement areas.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="skill-chart-card">
+                <h3>Skill Proficiency Overview</h3>
+                <div id="skillBars">
+                    <p>Your skill analysis chart will appear here.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <p class="note">
+            Note: This is a frontend assessment demo using your self-reported
+            proficiency levels. AI-powered skill analysis will be integrated later.
+        </p>
+
+    </main>
+
+    <footer>
+        © 2026 EduVerse AI. Learn Smarter. Grow Faster.
+    </footer>
+
+    <script src="../js/skill-analyzer.js"></script>
+
+</body>
+</html>
