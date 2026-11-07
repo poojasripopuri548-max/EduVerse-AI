@@ -1,0 +1,234 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #0b1020;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.auth-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* LEFT BRAND SECTION */
+
+.auth-brand {
+    width: 45%;
+    padding: 45px 8%;
+    background:
+        radial-gradient(circle at 20% 80%, #302568, transparent 45%),
+        #111a32;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid #293451;
+}
+
+.logo {
+    font-size: 29px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #a18cff;
+}
+
+.brand-content {
+    max-width: 430px;
+}
+
+.tagline {
+    color: #a18cff;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 22px;
+}
+
+.brand-content h1 {
+    font-size: 46px;
+    margin-bottom: 20px;
+}
+
+.brand-content p:last-child {
+    color: #abb5d0;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.brand-footer {
+    color: #8993ad;
+    font-size: 13px;
+}
+
+/* RIGHT FORM SECTION */
+
+.auth-form-section {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 25px;
+}
+
+.form-box {
+    width: 100%;
+    max-width: 420px;
+}
+
+.form-box h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #9da8c2;
+    margin-bottom: 35px;
+    font-size: 14px;
+}
+
+/* INPUT FIELDS */
+
+form label {
+    display: block;
+    color: #d7dcef;
+    margin-bottom: 9px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 14px;
+    background: #151e35;
+    border: 1px solid #303d5c;
+    border-radius: 8px;
+    color: white;
+    outline: none;
+    font-size: 14px;
+}
+
+form input:focus,
+form select:focus {
+    border-color: #9582ff;
+    box-shadow: 0 0 0 3px rgba(149, 130, 255, 0.12);
+}
+
+form input::placeholder {
+    color: #77839e;
+}
+
+/* PASSWORD */
+
+.password-box {
+    position: relative;
+}
+
+.password-box input {
+    padding-right: 65px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #a18cff;
+    cursor: pointer;
+}
+
+/* FORM OPTIONS */
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 12px;
+}
+
+.form-options .remember {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #aab2ca;
+}
+
+.remember input {
+    width: auto;
+    accent-color: #917cff;
+}
+
+.form-options a,
+.switch-text a {
+    color: #a18cff;
+    text-decoration: none;
+}
+
+/* BUTTON */
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #7065ef, #a16bff);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(132, 104, 255, 0.25);
+}
+
+.message {
+    margin-top: 15px;
+    font-size: 13px;
+    text-align: center;
+    color: #a18cff;
+}
+
+.switch-text {
+    text-align: center;
+    margin-top: 28px;
+    color: #9da8c2;
+    font-size: 13px;
+}
+
+.back-home {
+    display: block;
+    text-align: center;
+    margin-top: 28px;
+    color: #a18cff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 800px) {
+    .auth-brand {
+        display: none;
+    }
+
+    .auth-form-section {
+        width: 100%;
+        padding: 30px 20px;
+    }
+}

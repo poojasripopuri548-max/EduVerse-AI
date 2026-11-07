@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #0b1020;
+    color: #f1f5f9;
+    min-height: 100vh;
+}
+
+/* Navigation */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #11182b;
+    border-bottom: 1px solid #26314a;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #a78bfa;
+}
+
+.topbar nav {
+    display: flex;
+    gap: 25px;
+}
+
+.topbar nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.topbar nav a:hover {
+    color: #a78bfa;
+}
+
+/* Main Container */
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: 50px auto;
+}
+
+/* Page Heading */
+.page-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.eyebrow {
+    color: #a78bfa;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.page-heading h1 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.page-heading p:last-child {
+    color: #94a3b8;
+    font-size: 16px;
+}
+
+/* Editor Card */
+.editor-card,
+.result-card {
+    background: #151e33;
+    border: 1px solid #293550;
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.editor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.editor-header h2,
+.result-card h2 {
+    font-size: 21px;
+    margin-bottom: 7px;
+}
+
+.editor-header p,
+#resultMessage {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+#language {
+    background: #202c45;
+    color: #ffffff;
+    border: 1px solid #475569;
+    padding: 10px 16px;
+    border-radius: 8px;
+    outline: none;
+}
+
+/* Code Textarea */
+#codeInput {
+    width: 100%;
+    min-height: 300px;
+    resize: vertical;
+    background: #080d19;
+    color: #dbeafe;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    padding: 20px;
+    font-family: Consolas, monospace;
+    font-size: 14px;
+    line-height: 1.7;
+    outline: none;
+}
+
+#codeInput:focus {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+}
+
+/* Buttons */
+.editor-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.editor-actions button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#reviewBtn {
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    color: white;
+}
+
+#reviewBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.3);
+}
+
+.clear-btn {
+    background: #26334d;
+    color: #cbd5e1;
+}
+
+.clear-btn:hover {
+    background: #374663;
+}
+
+/* Results */
+.result-card {
+    min-height: 150px;
+}
+
+#resultMessage {
+    margin-top: 12px;
+}
+
+#reviewResults {
+    margin-top: 20px;
+}
+
+.review-item {
+    background: #202c45;
+    border-left: 4px solid #8b5cf6;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 12px;
+}
+
+.review-item h3 {
+    font-size: 15px;
+    margin-bottom: 7px;
+    color: #c4b5fd;
+}
+
+.review-item p {
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Note */
+.note {
+    text-align: center;
+    color: #64748b;
+    font-size: 13px;
+    margin: 25px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 650px) {
+    .topbar {
+        padding: 18px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .topbar nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container {
+        width: 92%;
+        margin: 30px auto;
+    }
+
+    .page-heading h1 {
+        font-size: 29px;
+    }
+
+    .editor-card,
+    .result-card {
+        padding: 18px;
+    }
+
+    .editor-header {
+        align-items: flex-start;
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    .editor-actions {
+        flex-direction: column;
+    }
+
+    .editor-actions button {
+        width: 100%;
+    }
+}
