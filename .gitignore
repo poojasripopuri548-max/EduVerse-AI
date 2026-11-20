@@ -1,6 +1,7 @@
 # Environment variables and secrets
 .env
 .env.*
+**/.env
 
 # Python virtual environment
 .venv/
@@ -9,6 +10,7 @@ venv/
 # Python generated files
 __pycache__/
 *.py[cod]
+*.pyc
 
 # Django generated files
 db.sqlite3
