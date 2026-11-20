@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Code Reviewer | EduVerse AI</title>
+    <link rel="stylesheet" href="../css/code-review.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <a href="../index.html" class="logo">EduVerse <span>AI</span></a>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="learning.html">Learning Companion</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="page-heading">
+            <p class="eyebrow">YOUR AI-POWERED CODING ASSISTANT</p>
+            <h1>AI Code Reviewer</h1>
+            <p>Write your code, review it, and discover ways to improve it.</p>
+        </section>
+
+        <section class="editor-card">
+            <div class="editor-header">
+                <div>
+                    <h2>Code Editor</h2>
+                    <p>Paste or write your code below.</p>
+                </div>
+
+                <select id="language">
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="c">C</option>
+                </select>
+            </div>
+
+            <textarea
+                id="codeInput"
+                placeholder="Write your code here..."
+                spellcheck="false"
+            ></textarea>
+
+            <div class="editor-actions">
+                <button id="reviewBtn">Review Code</button>
+                <button id="clearBtn" class="clear-btn">Clear Code</button>
+            </div>
+        </section>
+
+        <section class="result-card" id="resultSection">
+            <h2>Review Results</h2>
+            <p id="resultMessage">
+                Your code review results will appear here.
+            </p>
+            <div id="reviewResults"></div>
+        </section>
+
+        <p class="note">
+            Note: This is a basic frontend demo. Advanced AI code analysis
+            will be connected through the EduVerse AI backend.
+        </p>
+    </main>
+
+    <script src="../js/code-review.js"></script>
+</body>
+</html>

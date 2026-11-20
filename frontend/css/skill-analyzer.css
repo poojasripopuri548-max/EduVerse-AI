@@ -1,0 +1,367 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #0b1020;
+    color: #f1f5f9;
+    min-height: 100vh;
+}
+
+/* Navigation */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #11182b;
+    border-bottom: 1px solid #26314a;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #a78bfa;
+}
+
+.topbar nav {
+    display: flex;
+    gap: 25px;
+}
+
+.topbar nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.topbar nav a:hover {
+    color: #a78bfa;
+}
+
+/* Main Container */
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: 45px auto;
+}
+
+/* Page Heading */
+.page-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.eyebrow {
+    color: #a78bfa;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.page-heading h1 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.page-heading p:last-child {
+    color: #94a3b8;
+    line-height: 1.6;
+}
+
+/* Profile Card */
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px;
+    margin-bottom: 25px;
+    background: linear-gradient(120deg, #202c4b, #252044);
+    border: 1px solid #394466;
+    border-radius: 15px;
+}
+
+.profile-avatar {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.profile-card h2 {
+    margin-bottom: 7px;
+}
+
+.profile-card p {
+    color: #b5bfd2;
+    font-size: 14px;
+}
+
+/* Assessment Card */
+.assessment-card,
+.result-card,
+.skill-chart-card {
+    background: #151e33;
+    border: 1px solid #293550;
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+.section-heading {
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.section-heading p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* Skill Inputs */
+#skillForm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.skill-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skill-input label {
+    color: #e2e8f0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.skill-input select {
+    width: 100%;
+    padding: 13px;
+    background: #202c45;
+    color: #ffffff;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+}
+
+.skill-input select:focus {
+    border-color: #a78bfa;
+    box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.12);
+}
+
+.skill-input option {
+    background: #151e33;
+}
+
+/* Analyze Button */
+.analyze-btn {
+    grid-column: 1 / -1;
+    width: fit-content;
+    padding: 13px 25px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 9px;
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.analyze-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(139, 92, 246, 0.3);
+}
+
+/* Results Section */
+.results-section {
+    margin-top: 40px;
+    scroll-margin-top: 25px;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.result-card {
+    min-height: 230px;
+    margin-bottom: 0;
+}
+
+.result-card h3,
+.skill-chart-card h3 {
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+/* Score Circle */
+.score-circle {
+    width: 115px;
+    height: 115px;
+    margin: 15px auto;
+    border-radius: 50%;
+    border: 9px solid #8b5cf6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #202044;
+}
+
+.score-circle span {
+    font-size: 27px;
+    font-weight: 700;
+    color: #c4b5fd;
+}
+
+.result-card > p {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+.result-list-item {
+    color: #cbd5e1;
+    font-size: 14px;
+    padding: 9px 0;
+    border-bottom: 1px solid #293550;
+    line-height: 1.5;
+}
+
+.empty-message {
+    color: #94a3b8;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* Skill Bars */
+.skill-chart-card {
+    margin-top: 20px;
+}
+
+.skill-bar-item {
+    margin-bottom: 22px;
+}
+
+.skill-bar-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 9px;
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+.skill-bar-heading span:last-child {
+    color: #c4b5fd;
+    font-weight: 600;
+}
+
+.skill-track {
+    width: 100%;
+    height: 9px;
+    background: #293550;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.skill-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #8b5cf6, #6366f1);
+    border-radius: 20px;
+    transition: width 0.5s ease;
+}
+
+/* Note */
+.note {
+    text-align: center;
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 25px 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #64748b;
+    background: #11182b;
+    border-top: 1px solid #26314a;
+    font-size: 13px;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+    .results-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .topbar {
+        padding: 18px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .topbar nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container {
+        width: 92%;
+        margin: 30px auto;
+    }
+
+    .page-heading h1 {
+        font-size: 29px;
+    }
+
+    #skillForm,
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .assessment-card,
+    .result-card,
+    .skill-chart-card {
+        padding: 20px;
+    }
+
+    .analyze-btn {
+        width: 100%;
+    }
+
+    .profile-card {
+        align-items: flex-start;
+    }
+}

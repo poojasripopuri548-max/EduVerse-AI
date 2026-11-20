@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Learning Companion | EduVerse AI</title>
+    <link rel="stylesheet" href="../css/learning.css">
+</head>
+<body>
+
+<div class="app-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <a href="../index.html" class="logo">EduVerse<span>AI.</span></a>
+
+        <p class="menu-label">WORKSPACE</p>
+
+        <nav>
+            <a href="dashboard.html" class="nav-link">⌂ Dashboard</a>
+            <a href="learning.html" class="nav-link active">✦ Learning Companion</a>
+            <a href="#" class="nav-link">⌘ Code Reviewer</a>
+            <a href="#" class="nav-link">◈ Skill Analyzer</a>
+            <a href="#" class="nav-link">➜ Learning Roadmap</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="dashboard.html" class="nav-link">← Dashboard</a>
+            <a href="login.html" class="nav-link">↪ Logout</a>
+        </div>
+
+    </aside>
+
+    <!-- CHAT AREA -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <p class="top-label">YOUR PERSONAL AI TUTOR</p>
+                <h2>AI Learning Companion</h2>
+            </div>
+
+            <div class="status">
+                <span class="status-dot"></span>
+                Demo Assistant
+            </div>
+        </header>
+
+        <!-- WELCOME -->
+        <section class="chat-welcome">
+            <div class="welcome-icon">✦</div>
+            <h1>Hey there, Learner!</h1>
+            <p>What would you like to learn today?</p>
+            <small>Ask questions, explore concepts and improve your understanding.</small>
+        </section>
+
+        <!-- SUGGESTIONS -->
+        <section class="suggestions">
+            <button class="suggestion-btn" data-question="Explain Machine Learning in simple words">
+                ✦ Explain Machine Learning
+            </button>
+
+            <button class="suggestion-btn" data-question="What is Python OOP?">
+                ⌘ Learn Python OOP
+            </button>
+
+            <button class="suggestion-btn" data-question="Explain Neural Networks with an example">
+                ◈ Neural Networks
+            </button>
+
+            <button class="suggestion-btn" data-question="Give me a study plan for learning AI">
+                ➜ AI Study Plan
+            </button>
+        </section>
+
+        <!-- CHAT MESSAGES -->
+        <section class="chat-box">
+
+            <div class="chat-header">
+                <div>
+                    <h3>Conversation</h3>
+                    <small>Ask your learning questions below</small>
+                </div>
+
+                <button id="clearChat" class="clear-btn">Clear Chat</button>
+            </div>
+
+            <div id="chatMessages" class="chat-messages">
+
+                <div class="message assistant-message">
+                    <div class="avatar">✦</div>
+                    <div class="message-content">
+                        <strong>EduVerse AI</strong>
+                        <p>Hello! I'm your Learning Companion. Ask me anything about your studies. Let's learn together!</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- INPUT -->
+            <form id="chatForm" class="chat-input-area">
+
+                <input
+                    type="text"
+                    id="userInput"
+                    placeholder="Ask me anything..."
+                    autocomplete="off"
+                    required
+                >
+
+                <button type="submit" id="sendBtn">Send ➤</button>
+
+            </form>
+
+            <p class="input-note">
+                AI responses in this preview are simulated. Real AI integration comes later.
+            </p>
+
+        </section>
+
+        <footer>
+            © 2026 EduVerse AI | Learn Beyond Limits
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="../js/learning.js"></script>
+
+</body>
+</html>
