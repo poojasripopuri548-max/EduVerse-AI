@@ -43,3 +43,12 @@ class StudentLoginSerializer(serializers.Serializer):
     password = serializers.CharField(
         write_only=True
     )
+
+
+class StudentProfileUpdateSerializer(serializers.Serializer):
+
+    full_name = serializers.CharField(max_length=100, required=False)
+    college_name = serializers.CharField(max_length=150, required=False)
+    department = serializers.CharField(max_length=100, required=False)
+    year_of_study = serializers.IntegerField(min_value=1, max_value=8, required=False)
+    career_goal = serializers.CharField(max_length=150, required=False)
