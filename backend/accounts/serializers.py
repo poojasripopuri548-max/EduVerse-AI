@@ -17,16 +17,30 @@ class StudentRegistrationSerializer(serializers.Serializer):
         write_only=True
     )
 
-    college_name = serializers.CharField(max_length=150)
+    college_name = serializers.CharField(
+        max_length=150,
+        required=False,
+        default="Not specified"
+    )
 
-    department = serializers.CharField(max_length=100)
+    department = serializers.CharField(
+        max_length=100,
+        required=False,
+        default="General"
+    )
 
     year_of_study = serializers.IntegerField(
         min_value=1,
-        max_value=8
+        max_value=8,
+        required=False,
+        default=1
     )
 
-    career_goal = serializers.CharField(max_length=150)
+    career_goal = serializers.CharField(
+        max_length=150,
+        required=False,
+        default="Software Developer"
+    )
 
     def validate(self, data):
 

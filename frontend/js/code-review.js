@@ -1,3 +1,10 @@
+// ========================================
+// EDUVERSE AI - CODE REVIEWER
+// Connected to Django Backend + Fallback
+// ========================================
+
+const API_BASE_URL = "http://127.0.0.1:8000/api";
+
 const codeInput = document.getElementById("codeInput");
 const languageSelect = document.getElementById("language");
 const reviewBtn = document.getElementById("reviewBtn");
@@ -6,7 +13,7 @@ const resultMessage = document.getElementById("resultMessage");
 const reviewResults = document.getElementById("reviewResults");
 
 // Review Code Button
-reviewBtn.addEventListener("click", function () {
+reviewBtn.addEventListener("click", async function () {
     const code = codeInput.value.trim();
     const language = languageSelect.value;
 
@@ -17,8 +24,35 @@ reviewBtn.addEventListener("click", function () {
         return;
     }
 
-    resultMessage.textContent = "Basic demo analysis completed.";
+    resultMessage.textContent = "Analyzing your code with EduVerse AI...";
+    reviewBtn.disabled = true;
 
+    const token = localStorage.getItem("eduverse_token");
+    const headers = { "Content-Type": "application/json" };
+    if (token) {
+        headers["Authorization"] = `Bearer ${token}`;
+    }
+
+    try {
+        const response = await fetch(`${API_BASE_URL}/code-review/analyze/`, {
+            method: "POST",
+            headers: headers,
+            body: JSON.stringify({ code: code, language: language })
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            resultMessage.textContent = "AI Code Review Completed Successfully!";
+            addResult("EduVerse AI Analysis Report", data.review);
+            reviewBtn.disabled = false;
+            return;
+        }
+    } catch (error) {
+        console.warn("Backend API offline, falling back to local analyzer.", error);
+    }
+
+    // Local Fallback Analysis
+    resultMessage.textContent = "Basic demo analysis completed.";
     const issues = analyzeCode(code, language);
 
     if (issues.length === 0) {
@@ -31,9 +65,11 @@ reviewBtn.addEventListener("click", function () {
             addResult(issue.title, issue.description);
         });
     }
+
+    reviewBtn.disabled = false;
 });
 
-// Basic Demo Code Analysis
+// Basic Demo Code Analysis (Offline Fallback)
 function analyzeCode(code, language) {
     const issues = [];
 
@@ -112,6 +148,7 @@ function addResult(title, description) {
 
     const paragraph = document.createElement("p");
     paragraph.textContent = description;
+    paragraph.style.whiteSpace = "pre-line";
 
     item.appendChild(heading);
     item.appendChild(paragraph);
